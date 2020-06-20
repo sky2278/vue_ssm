@@ -14,8 +14,14 @@ import java.util.Map;
 @RestController
 @RequestMapping("/user")
 public class UserController {
+
     @Autowired
     private UserService userService;
+
+    @RequestMapping("/deleteById")
+    public void deleteById(@RequestBody User user) {
+        System.out.println("删除成功!");
+    }
 
     @RequestMapping("/findAll")
     public List<User> findAll() {
