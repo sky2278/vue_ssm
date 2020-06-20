@@ -18,8 +18,13 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @RequestMapping("/save")
+    public void save(@RequestBody User user) {
+        System.out.println("添加成功!");
+    }
+
     @RequestMapping("/deleteById")
-    public void deleteById(@RequestBody User user) {
+    public void deleteById(Integer id) {
         System.out.println("删除成功!");
     }
 
